@@ -227,7 +227,10 @@ ProgBar = function(element, options) {
 			this.outerBar.css('height', this.options.height);
 		}
 
-		this.outerBar.append(this.innerBar);
+		this.outerBar
+			.empty()
+			.append(this.innerBar)
+		;
 
 	/* END: outer bar */
 
@@ -258,6 +261,6 @@ ProgBar = function(element, options) {
 
 	/* END: private methods */
 
-	this.version = '0.1.0';
+	this.version = '0.1.1';
 
 };
